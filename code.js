@@ -6,26 +6,24 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-let Refferences = figma.createPage();
-let UXApproaches = figma.createPage();
-let ContentApproaches = figma.createPage();
-let UIApproaches = figma.createPage();
-let FinalUI = figma.createPage();
+
+let Research = figma.createPage();
+let InProgress = figma.createPage();
+let ForReview = figma.createPage();
 let Prototype = figma.createPage();
-let Showcase = figma.createPage();
+let ReadyForDev = figma.createPage();
 let Cover = figma.currentPage;
 let CoverFrame = figma.createFrame();
 let CoverHead = figma.createText();
 let CoverDesc = figma.createText();
-figma.currentPage.name = "⬜️ Cover";
-Refferences.name = "🔭 References";
-UXApproaches.name = "📋 UX Approaches";
-ContentApproaches.name = "✍🏼 Content Approaches";
-UIApproaches.name = "👁 UI Approaches";
-FinalUI.name = "👍 Final UI";
-Prototype.name = "📱 Prototype";
-Showcase.name = "🖥 Showcase";
-CoverFrame.name = "Cover";
+
+figma.currentPage.name = "📓 Cover";
+Refferences.name = "🧬 Research";
+UXApproaches.name = "🚧 In Progress";
+ContentApproaches.name = "👀 For Review"
+UIApproaches.name = "🕹️ Prototype";
+FinalUI.name = "👍 Ready for Dev";
+CoverFrame.name = "📓 Cover";
 Cover.appendChild(CoverFrame);
 CoverFrame.appendChild(CoverHead);
 CoverFrame.appendChild(CoverDesc);
@@ -34,14 +32,14 @@ let setPosition = (node, spacex, spacey) => { node.relativeTransform = [[1, 0, s
 let xCalculator = (container, element) => { return ((container.width / 2) - (element.width / 2)); };
 let yCalculator = (container, element) => { return ((container.height / 2) - (element.height / 2)); };
 let loadFontHead = (name) => __awaiter(this, void 0, void 0, function* () {
-    yield figma.loadFontAsync({ family: "Roboto", style: "Bold" });
-    CoverHead.fontName = { family: "Roboto", style: "Bold" };
+    yield figma.loadFontAsync({ family: "Inter", style: "Bold" });
+    CoverHead.fontName = { family: "Inter", style: "Bold" };
     CoverHead.characters = name;
     CoverHead.fontSize = 74;
     CoverHead.textAlignHorizontal = "CENTER";
 });
 let loadFontDesc = (text) => __awaiter(this, void 0, void 0, function* () {
-    yield figma.loadFontAsync({ family: "Roboto", style: "Regular" });
+    yield figma.loadFontAsync({ family: "Inter", style: "Regular" });
     CoverDesc.fontSize = 36;
     CoverDesc.characters = text;
     CoverDesc.textAlignHorizontal = "CENTER";

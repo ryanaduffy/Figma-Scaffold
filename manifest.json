@@ -1,6 +1,9 @@
 {
-  "name": "Project Scaffold",
-  "id": "747372158567878238",
+  "name": "Alvys Scaffold",
   "api": "1.0.0",
+  "editorType": [
+    "figjam",
+    "figma"
+  ],
   "main": "code.js"
 }

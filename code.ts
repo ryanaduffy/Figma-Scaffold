@@ -1,28 +1,22 @@
 
 
-let Refferences = figma.createPage();
-let UXApproaches = figma.createPage();
-let ContentApproaches = figma.createPage();
-let UIApproaches = figma.createPage();
-let FinalUI = figma.createPage();
+let Research = figma.createPage();
+let InProgress = figma.createPage();
+let ForReview = figma.createPage();
 let Prototype = figma.createPage();
-let Showcase = figma.createPage();
+let ReadyForDev = figma.createPage();
 let Cover = figma.currentPage;
 let CoverFrame = figma.createFrame();
 let CoverHead = figma.createText();
 let CoverDesc = figma.createText();
 
-figma.currentPage.name = "⬜️ Cover";
-Refferences.name = "🔭 References";
-UXApproaches.name = "📋 UX Approaches";
-ContentApproaches.name = "✍🏼 Content Approaches"
-UIApproaches.name = "👁 UI Approaches";
-FinalUI.name = "👍 Final UI";
-Prototype.name = "📱 Prototype";
-Showcase.name = "🖥 Showcase";
+figma.currentPage.name = "📓 Cover";
+Research.name = "🧬 Research";
+InProgress.name = "🚧 In Progress";
+ForReview.name = "👀 For Review"
+Prototype.name = "🕹️ Prototype";
+ReadyForDev.name = "👍 Ready for Dev";
 CoverFrame.name = "Cover";
-
-
 
 Cover.appendChild(CoverFrame);
 CoverFrame.appendChild(CoverHead);
@@ -36,8 +30,8 @@ let xCalculator = (container: FrameNode, element: TextNode) => { return ((contai
 let yCalculator = (container: FrameNode, element: TextNode) => { return ((container.height / 2) - (element.height / 2)); }
 
 let loadFontHead = async (name: string) => {
-  await figma.loadFontAsync({ family: "Roboto", style: "Bold" });
-  CoverHead.fontName = { family: "Roboto", style: "Bold" };
+  await figma.loadFontAsync({ family: "Inter", style: "Bold" });
+  CoverHead.fontName = { family: "Inter", style: "Bold" };
   CoverHead.characters = name;
   CoverHead.fontSize = 74;
   CoverHead.textAlignHorizontal = "CENTER";
@@ -46,7 +40,7 @@ let loadFontHead = async (name: string) => {
 
 let loadFontDesc = async (text) => {
 
-  await figma.loadFontAsync({ family: "Roboto", style: "Regular" });
+  await figma.loadFontAsync({ family: "Inter", style: "Regular" });
   CoverDesc.fontSize = 36;
   CoverDesc.characters = text;
   CoverDesc.textAlignHorizontal = "CENTER";
